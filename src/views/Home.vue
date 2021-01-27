@@ -17,6 +17,7 @@
         <strong>Ready to create an app?</strong>
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
+      <h1>Count {{count}}</h1>
     </ion-content>
   </ion-page>
 </template>
@@ -33,7 +34,12 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar
-  }
+  },
+  computed: {
+    count() {
+      return this.$store.state.count
+    }
+  },
 });
 </script>
 
